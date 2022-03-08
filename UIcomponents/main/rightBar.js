@@ -98,6 +98,13 @@ const HallFame = styled.div`
 		cursor: pointer;
 	}
 `
+const Pis=styled.h2`
+	text-align:center;
+	color:#1920EF;
+	padding: 2px;
+	border-bottom: 2px solid #1920EF;
+	border-top: 2px solid #1920EF;
+`
 const Image = styled.img`
 	margin-right: 1em;
 `
@@ -108,8 +115,8 @@ const RightBar = ({active, close}) => {
     useEffect(() => {
         setIsMounted(true);
     },[]);
-  const [mState, setMainState] = useMainState()
-
+  	const [mState, setMainState] = useMainState()
+  	const piso = mState.piso ? mState.piso : 1
 	const openModal = (type) => {
     setMainState({
       ...mState,
@@ -130,7 +137,7 @@ const RightBar = ({active, close}) => {
 			<div style={{fontSize: '.9em'}}>
 			{/* <GroupSel/> */}
 			</div>
-			
+			<Pis>¡Estamos en el piso número {piso}!</Pis>
 			{/* <Miniprofile></Miniprofile> */}
 			<Calendar/>
 			
