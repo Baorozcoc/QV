@@ -1,6 +1,7 @@
 {
   "name": "quanticon_valley_next",
   "private": true,
+  "homepage": "https://baorozcoc.github.io/QV",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
