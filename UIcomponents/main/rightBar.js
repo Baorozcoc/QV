@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { prefix } from '../../utils/prefix.js';
 import ReactTooltip from 'react-tooltip'
 import { useState, useEffect } from 'react';
-
+import { statePiso } from '../../public/data/index.js';
 import { useMainState } from '../../libs/stateHooks'
 
 import NotiWidget from '../notiWidget'
@@ -116,16 +116,7 @@ const RightBar = ({active, close}) => {
         setIsMounted(true);
     },[]);
   	const [mState, setMainState] = useMainState()
-  	const piso = mState.piso ? mState.piso : 1
-	const openModal = (type) => {
-    setMainState({
-      ...mState,
-      modal: {
-        visibility: true,
-        type: type
-      }
-    })
-	}
+  	const piso = statePiso()
 	return (
 		<Container active={active}>
 			<Header>
