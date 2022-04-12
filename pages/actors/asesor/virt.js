@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { prefix } from '../../../../utils/prefix.js';
-import { getAsesorVir } from '../../../../public/data'
-import { Modal, useModal } from '../../../../UIcomponents/modal'
-import AsesorContact from '../../../../UIcomponents/asesorContact'
+import { prefix } from '../../../utils/prefix.js';
+import { getAsesorVir } from '../../../public/data'
+import { Modal, useModal } from '../../../UIcomponents/modal'
+import AsesorContact from '../../../UIcomponents/asesorContact'
 
 import styled from 'styled-components';
 
